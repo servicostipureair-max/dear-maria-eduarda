@@ -1,7 +1,6 @@
 const HEART_CELL_SIZE = 40;
 
-// Mapa 13x11 do coração (1 = tem coração, 0 = vazio)
-// Desenhado para ficar totalmente preenchido como na imagem que você mandou
+
 const HEART_MAP = [
     "0011100001110",
     "0111110011110",
@@ -22,7 +21,7 @@ let index = 0;
 let typingStarted = false;
 let heartStarted = false;
 
-// Pré-calcula todas as posições onde terá coração
+
 const heartCells = [];
 for (let row = 0; row < HEART_MAP.length; row++) {
     const line = HEART_MAP[row];
@@ -68,15 +67,15 @@ function startTyping() {
     let metaIdx = 0;
     let step = "main";
 
-    // apaga o texto inicial para só aparecer digitado
+   
     mainEl.textContent = "";
     subEl.textContent = "";
     metaEl.textContent = "";
 
-    // agora mostra o bloco de texto (começa invisível no CSS)
+   
     textWrapper.style.opacity = "1";
 
-    const speed = 80; // ms por caractere
+    const speed = 80; 
 
     const typeTimer = setInterval(() => {
         if (step === "main") {
@@ -108,16 +107,15 @@ function startTyping() {
 }
 
 window.onload = function () {
-    // começa a montar o coração DEPOIS de um tempo fixo
-    // para dar tempo do GIF aparecer primeiro, mesmo se vier do cache
-    const HEART_START_DELAY_MS = 7000; // 7s depois do carregamento da página
+   
+    const HEART_START_DELAY_MS = 7000; 
 
     function startHeart() {
         if (heartStarted) return;
         heartStarted = true;
         timer = setInterval(() => {
             Next();
-        }, 30); // mais rápido: intervalo menor entre os corações
+        }, 30); 
     }
 
     setTimeout(startHeart, HEART_START_DELAY_MS);
