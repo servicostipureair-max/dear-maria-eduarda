@@ -80,7 +80,7 @@ body {
     transform: translate(-50%, 5px);
     text-align: center;
     font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-    opacity: 0; /* começa invisível; aparece só quando começar a digitação */
+    opacity: 0; 
     transition: opacity 0.3s ease;
 }
 
@@ -99,7 +99,7 @@ body {
 .love-meta {
     margin-top: 2px;
     font-size: 12px;
-    color: #666666; /* um pouco mais escuro para aparecer melhor */
+    color: #666666; 
 }
 
 .copy-by {
